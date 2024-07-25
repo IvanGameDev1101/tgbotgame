@@ -21,6 +21,7 @@
     "@ton/phaser-sdk": "^0.0.1-beta.1",
     "@ton/ton": "^14.0.0",
     "@tonconnect/sdk": "^3.0.3",
+    "@vitejs/plugin-vue": "^5.1.0",
     "boxen": "^4.0.0",
     "phaser": "^3.80.1",
     "ton": "^13.9.0"

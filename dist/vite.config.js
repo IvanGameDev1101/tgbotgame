@@ -1,17 +1,16 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import path from 'path';
+
 export default defineConfig({
-    plugins: [vue()],
-    base: '/tgbotgame/',
+    base: '/tgbotgame/', // Замените 'repo-name' на имя вашего репозитория
+    build: {
+        outDir: 'dist'
+    },
     resolve: {
         alias: {
-            '@': '/src',
-            phaser: 'phaser/dist/phaser.js',
-        },
-    },
-    server: {
-        host: '0.0.0.0',
-        port: 3000,
-    },
+            '@': path.resolve(__dirname, './src'),
+            'phaser': path.resolve(__dirname, 'node_modules/phaser/dist/phaser.js')
+        }
+    }
 });
 //# sourceMappingURL=vite.config.js.map

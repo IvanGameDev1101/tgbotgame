@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
+      "target": "es6",
+      "module": "es6",
       "lib": ["dom", "esnext"],
       "allowJs": true,
       "checkJs": false,
       "jsx": "preserve",
       "sourceMap": true,
-      "outDir": "dist",
-      "rootDir": "src",
+      "outDir": "./dist",
+      "rootDir": "./src",
       "strict": true,
       "moduleResolution": "node",
       "esModuleInterop": true,

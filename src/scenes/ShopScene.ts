@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import TonService from '../service/TonService';
+// import TonService from '../service/TonService';
 
 export default class ShopScene extends Phaser.Scene {
     private score!: number;
@@ -32,8 +32,8 @@ export default class ShopScene extends Phaser.Scene {
     }
 
     async create() {
-        const tonService = TonService.getInstance();
-        await tonService.connectWallet();
+        // const tonService = TonService.getInstance();
+        // await tonService.connectWallet();
 
         this.scoreText = this.add.text(100, 100, `Score: ${this.score}`, { fontSize: '24px', color: '#fff' });
 
@@ -63,7 +63,7 @@ export default class ShopScene extends Phaser.Scene {
             .setInteractive()
             .on('pointerdown', async () => {
                 try {
-                    await tonService.sendTransaction('ВАШ АДРЕС КОШЕЛЬКА', '0.1');
+                    // await tonService.sendTransaction('ВАШ АДРЕС КОШЕЛЬКА', '0.1');
                     this.clickValue += 100;
                     this.updateShop();
                 } catch (error) {
@@ -97,7 +97,7 @@ export default class ShopScene extends Phaser.Scene {
             .setInteractive()
             .on('pointerdown', async () => {
                 try {
-                    await tonService.sendTransaction('ВАШ АДРЕС КОШЕЛЬКА', '0.1');
+                    // await tonService.sendTransaction('ВАШ АДРЕС КОШЕЛЬКА', '0.1');
                     this.passiveIncome += 100;
                     this.updateShop();
                 } catch (error) {

@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import Phaser from './node_modules/phaser/dist/phaser.js';
+import Phaser from 'phaser';
 // import TonService from '../service/TonService';
 export default class ShopScene extends Phaser.Scene {
     constructor() {

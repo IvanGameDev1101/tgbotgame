@@ -24,8 +24,6 @@ export default class MainScene extends Phaser.Scene {
         if (data.clicks !== undefined) this.clicks = data.clicks;
         if (data.clickValue !== undefined) this.clickValue = data.clickValue;
         if (data.passiveIncome !== undefined) this.passiveIncome = data.passiveIncome;
-        this.userId = window.gameData.userId;
-        this.userName = window.gameData.userName;
 
         const tg = window.Telegram.WebApp;
         tg.onEvent('main_button_clicked', () => {

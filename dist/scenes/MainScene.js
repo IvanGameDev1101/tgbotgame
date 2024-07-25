@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from './node_modules/phaser/dist/phaser.js';
 export default class MainScene extends Phaser.Scene {
     constructor() {
         super({ key: 'MainScene' });

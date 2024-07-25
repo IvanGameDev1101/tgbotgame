@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from './node_modules/phaser/dist/phaser.js';
 import GameScene from './scenes/MainScene';
 import ShopScene from './scenes/ShopScene';
 import AchievementsScene from './scenes/AchievementsScene';

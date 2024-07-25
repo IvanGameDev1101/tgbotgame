@@ -6,6 +6,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': '/src',
+            phaser: 'phaser/dist/phaser.js',
         },
     },
     server: {

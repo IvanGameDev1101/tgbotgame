@@ -8,6 +8,8 @@ export default class MainScene extends Phaser.Scene {
     private clickValueText!: Phaser.GameObjects.Text;
     private passiveIncome: number;
     private passiveIncomeText!: Phaser.GameObjects.Text;
+    private userId!: string;
+    private userName!: string;
 
     constructor() {
         super({ key: 'MainScene' });
@@ -22,6 +24,14 @@ export default class MainScene extends Phaser.Scene {
         if (data.clicks !== undefined) this.clicks = data.clicks;
         if (data.clickValue !== undefined) this.clickValue = data.clickValue;
         if (data.passiveIncome !== undefined) this.passiveIncome = data.passiveIncome;
+        this.userId = window.gameData.userId;
+        this.userName = window.gameData.userName;
+
+        const tg = window.Telegram.WebApp;
+        tg.onEvent('main_button_clicked', () => {
+            // Обработка нажатия основной кнопки
+            console.log("Main button clicked");
+        });
     }
 
     preload() {

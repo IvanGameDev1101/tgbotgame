@@ -18,6 +18,25 @@
 </head>
 <body>
     <div id="game-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
     <script type="module" src="/src/main.ts"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть Web App на весь экран
+
+        tg.onEvent('main_button_clicked', function() {
+            // Обработка нажатия основной кнопки
+        });
+
+        // Передача данных в игру
+        window.gameData = {
+            userId: tg.initDataUnsafe.user.id,
+            userName: tg.initDataUnsafe.user.username
+        };
+
+        tg.MainButton.text = "Start Game";
+        tg.MainButton.show();
+    </script>
 </body>
 </html>
